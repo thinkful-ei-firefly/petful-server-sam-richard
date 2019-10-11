@@ -1,5 +1,6 @@
 'use strict';
 
+const { PORT, NODE_ENV } = require('./config');
 const express = require('express');
 const cors = require('cors');
 const helmet = require('helmet');
@@ -34,8 +35,6 @@ app.use(function (err, req, res, next) {
         error: app.get('env') === 'development' ? err : {}
     });
 });
-
-const PORT = process.env.PORT || 8080;
 
 app.listen(PORT,()=>{
     console.log('Serving on 8080');
