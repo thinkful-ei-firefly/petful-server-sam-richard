@@ -1,5 +1,6 @@
 'use strict';
 
+require('dotenv').config();
 const { PORT, NODE_ENV } = require('./config');
 const express = require('express');
 const cors = require('cors');
