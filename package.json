@@ -12,6 +12,9 @@
     "redeploy": "npm audit",
     "deploy": "git push heroku master"
   },
+  "engines": {
+    "node": "10.16.3"
+  },
   "dependencies": {
     "cors": "^2.8.5",
     "cuid": "^2.1.6",
