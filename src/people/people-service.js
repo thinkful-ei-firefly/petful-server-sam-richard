@@ -14,7 +14,6 @@ const PeopleService = {
             return [];
         }
         else{
-            console.log(`GetAll queue = ${peopleQueue}`);
             return this.queueToArray(peopleQueue);
         }
     },
@@ -26,7 +25,6 @@ const PeopleService = {
         const userId = cuid();
         const person = {id: userId, name: userName};
         peopleQueue.enqueue(person);
-        console.log(`AddPerson queue = ${peopleQueue}`);
         return userId;
     },
 
@@ -35,7 +33,6 @@ const PeopleService = {
         if(peopleQueue) {
             peopleQueue.dequeue();
         }
-        console.log(peopleQueue);
     },
 
     //turn queue to an array
