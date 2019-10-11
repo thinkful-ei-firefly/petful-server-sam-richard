@@ -8,14 +8,14 @@ const dogsRouter = express.Router();
 
 dogsRouter
     .route('/getAllDogs')
-    .get((req, res, next) => {
+    .get((req, res) => {
         const dogsArr = DogsService.getAllDogs();
         res.json( dogsArr );
     });
 
 dogsRouter
     .route('/adoptDog')
-    .delete((req, res, next) => {
+    .delete((req, res) => {
         DogsService.adoptDog();
         res
             .status(204)

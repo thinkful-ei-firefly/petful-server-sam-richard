@@ -6,7 +6,7 @@ const helmet = require('helmet');
 
 const DogsRouter = require('./dogs/dogs-router');
 const CatsRouter = require('./cats/cats-router');
-
+const PeopleRouter = require('./people/people-router');
 
 const app = express();
 
@@ -16,6 +16,7 @@ app.use(helmet());
 
 app.use('/api/dogs', DogsRouter);
 app.use('/api/cats', CatsRouter);
+app.use('/api/people', PeopleRouter);
 
 // Catch-all 404
 app.use(function (req, res, next) {

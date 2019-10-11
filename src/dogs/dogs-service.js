@@ -18,13 +18,11 @@ const DogsService = {
             qSize++;
         }
         let results = this.queueToArray(dogsQueue); 
-        console.log(`results = ${results[0].name}`);
         return results;
     },
     // add a dog to the queue
     addDog(queue) {
         const dogNum = Math.ceil(10 * Math.random() - 1);
-        console.log(dogNum);
         const dog = store.dogs[dogNum];
         queue.enqueue(dog);
     },
